@@ -1,0 +1,49 @@
+#Skeleton joboption for a simple analysis job
+
+#---- Minimal job options -----
+
+jps.AthenaCommonFlags.AccessMode = "ClassAccess"              #Choose from TreeAccess,BranchAccess,ClassAccess,AthenaAccess,POOLAccess
+#jps.AthenaCommonFlags.TreeName = "MyTree"                    #when using TreeAccess, must specify the input tree name
+
+jps.AthenaCommonFlags.HistOutputs = ["MYSTREAM:myfile.root"]  #register output files like this. MYSTREAM is used in the code
+
+athAlgSeq += CfgMgr.MyPackageAlg()                               #adds an instance of your alg to the main alg sequence
+
+
+#---- Options you could specify on command line -----
+#jps.AthenaCommonFlags.EvtMax=-1                          #set on command-line with: --evtMax=-1
+#jps.AthenaCommonFlags.SkipEvents=0                       #set on command-line with: --skipEvents=0
+#jps.AthenaCommonFlags.FilesInput = ["/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/CommonInputs/DAOD_PHYSVAL/mc16_13TeV.410501.PowhegPythia8EvtGen_A14_ttbar_hdamp258p75_nonallhad.DAOD_PHYSVAL.e5458_s3126_r9364_r9315_AthDerivation-21.2.1.0.root"]        #set on command-line with: --filesInput=...
+
+
+include("AthAnalysisBaseComps/SuppressLogging.py")              #Optional include to suppress as much athena output as possible. Keep at bottom of joboptions so that it doesn't suppress the logging of the things you have configured above
+
+
+
+
+
+#input 6k                                                                                                                                     
+#jps.AthenaCommonFlags.FilesInput =["/eos/user/g/gsalvi/mc16_13TeV.311985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merge.AOD.e7464_e5984_\
+s3126_r10201_r10210/AOD.17921533._000001.pool.root.1","/eos/user/g/gsalvi/mc16_13TeV.311985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merg\
+e.AOD.e7464_e5984_s3126_r10201_r10210/AOD.17921533._000002.pool.root.1","/eos/user/g/gsalvi/mc16_13TeV.311985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH80\
+0_mzd6k_qqbar.merge.AOD.e7464_e5984_s3126_r10201_r10210/AOD.17921533._000003.pool.root.1","/eos/user/g/gsalvi/mc16_13TeV.311985.MGPy8EG_A14NN\
+23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merge.AOD.e7464_e5984_s3126_r10201_r10210/AOD.17921533._000004.pool.root.1","/eos/user/g/gsalvi/mc16_13TeV.31\
+1985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merge.AOD.e7464_e5984_s3126_r10201_r10210/AOD.17921533._000005.pool.root.1","/eos/user/g/gs\
+alvi/mc16_13TeV.311985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merge.AOD.e7464_e5984_s3126_r10201_r10210/AOD.17921533._000006.pool.root.\
+1","/eos/user/g/gsalvi/mc16_13TeV.311985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merge.AOD.e7464_e5984_s3126_r10201_r10210/AOD.17921533.\
+_000007.pool.root.1"]                                                                                                                         
+
+
+
+#Per FTK                                                                                                                                      
+
+#jps.AthenaCommonFlags.FilesInput =["/afs/cern.ch/user/g/gsalvi/mc16_13TeV/AOD.18580628._014988.pool.root.1"]                                 
+
+#,"/eos/user/g/gsalvi/mc16_13TeV.311985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merge.AOD.e7464_e5984_s3126_r10724_r10726/AOD.17921797._\
+000001.pool.root.1","/eos/user/g/gsalvi/mc16_13TeV.311985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merge.AOD.e7464_e5984_s3126_r10724_r10\
+726/AOD.17921797._000002.pool.root.1","/eos/user/g/gsalvi/mc16_13TeV.311985.MGPy8EG_A14NN23LO_FRVZ_2zd_mH800_mzd6k_qqbar.merge.AOD.e7464_e598\
+4_s3126_r10724_r10726/AOD.17921797._000003.pool.root.1"]                                                                                      
+
+include("AthAnalysisBaseComps/SuppressLogging.py")              #Optional include to suppress as much athena output as possible. Keep at bott\
+om of joboptions so that it doesn't suppress the logging of the things you have configured above                                              
+

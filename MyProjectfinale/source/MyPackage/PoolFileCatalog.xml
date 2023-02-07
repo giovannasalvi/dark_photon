@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- Edited By POOL -->
+<!DOCTYPE POOLFILECATALOG SYSTEM "InMemory">
+<POOLFILECATALOG>
+  <File ID="1CDB6DB4-4017-9A40-B181-0F807D0C1677">
+    <physical>
+      <pfn filetype="ROOT_All" name="/afs/cern.ch/work/g/gsalvi/SIGNAL/mc16_13TeV/AOD.17920917._000012.pool.root.1"/>
+    </physical>
+    <logical/>
+  </File>
+
+</POOLFILECATALOG>
